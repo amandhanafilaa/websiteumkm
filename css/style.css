@@ -30,27 +30,25 @@ body {
 }
 
 .products {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
+  display: inline-block;
   margin-top: 24px;
   padding-left: 0;
-  flex-wrap: wrap;
 }
 
 .products li {
+  display: inline-block;
+  vertical-align: top;
   list-style: none;
   width: 220px;
   min-height: 160px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   box-sizing: border-box;
   border-radius: 15px;
   background: white;
   text-align: center;
   box-shadow: 0 10px 30px rgb(47 33 24 / 10%);
-
-  
 }
 
 .products li p {
@@ -84,8 +82,4 @@ button {
   background: #ffd166;
   border: 0;
   border-radius: 999px;
-
- 
 }
-
-
