@@ -7,10 +7,21 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
+    <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="index.html">zeze collection</a>
+        <ul>
+          <li><a aria-current="page" href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang Kami</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten" class="page">
+      <section class="hero" aria-labelledby="hero-title">
         <p class="eyebrow">Toko Pakaian Batang</p>
-        <h1>Zeze Collection</h1>
+        <h1 id="hero-title">Zeze Collection</h1>
         <p>
           Pakaian yang nyaman dan stylish untuk teman belajar, bekerja, dan
           berdiskusi.
@@ -18,38 +29,47 @@
         <button id="promoButton" type="button">
           Lihat promo Zeze Collection hari ini
         </button>
+        <img
+          src="assets/images/etalase-kopi.svg"
+          alt="Etalase Kopi Nusa berisi kemasan kopi lokal"
+        />
       </section>
 
       <section aria-labelledby="produk-title">
         <h2 id="produk-title">Produk Unggulan</h2>
-        <ul class="products">
-          <li>
-            Kaos Polos - Rp55.000
+
+        <div class="products- list">
+          <article class="product-card">
+            <h3>Kaos Polos</h3>
             <p>
               Kaos polos berbahan lembut dan hangat, cocok untuk aktivitas
               santai
             </p>
-          </li>
-          
+            <p class="price">Rp50.000</p>
+          </article>
+        </div>
 
-          <li>
-            Kemeja Wanita - Rp62.000
+        <div class="products- list">
+          <article class="product-card">
+            <h3>Kemeja Wanita</h3>
             <p>
               Kemeja wanita berkualitas tinggi, nyaman dipakai sepanjang hari
             </p>
-          </li>
-          
+            <p class="price">Rp62.000</p>
+          </article>
+        </div>
 
-          <li>
-            Kemeja laki laki - Rp60.000
+        <div class="products- list">
+          <article class="product-card">
+            <h3>Kemeja Laki-laki</h3>
             <p>
-              Kemeja laki laki berkualitas tinggi, nyaman dipakai sepanjang hari
+              Kemeja laki-laki berkualitas tinggi, nyaman dipakai sepanjang hari
             </p>
-          </li>
-        </ul>
-        <button id="pesanButton" type="button">
-    Pesan Sekarang
-  </button>
+            <p class="price">Rp50.000</p>
+          </article>
+        </div>
+
+        <button id="pesanButton" type="button">Pesan Sekarang</button>
       </section>
 
       <section aria-labelledby="info-title">
@@ -62,6 +82,9 @@
         </p>
       </section>
     </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Zeze Collection. Data pada halaman ini bersifat dummy.</p>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
