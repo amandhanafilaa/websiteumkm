@@ -135,10 +135,53 @@ button:focus-visible {
   background: #2f2118;
 }
 
-img { max-width: 100%; height: auto; }
-figure { margin: 0 0 24px; }
-figcaption { margin-top: 8px; color: #6b5b52; }
-table { width: 100%; border-collapse: collapse; }
-caption { margin-bottom: 8px; font-weight: 700; text-align: left; }
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0 0 24px;
+}
+figcaption {
+  margin-top: 8px;
+  color: #6b5b52;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+caption {
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-align: left;
+}
 th,
-td { padding: 10px; text-align: left; border: 1px solid #dccbbc; }
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #dccbbc;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+.field label {
+  display: block;
+  margin-bottom: 6px;
+}
+fieldset {
+  margin: 0 0 18px;
+}
+#preview-form {
+  padding: 18px;
+  white-space: pre-wrap;
+  background: white;
+  border: 1px solid #dccbbc;
+}
+
+.field small {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.4;
+}
