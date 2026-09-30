@@ -115,17 +115,19 @@
 
         <div class="field">
           <label for="pesan">Pesan</label>
-          <textarea
-            id="pesan"
-            name="pesan"
-            rows="5"
-         
-            minlength="10"
-          ></textarea>
+          <textarea id="pesan" name="pesan" rows="5" minlength="10"></textarea>
         </div>
 
         <button type="submit">Tampilkan Preview</button>
       </form>
+
+      <p class="status-success" role="status" hidden>
+        ✓ Pesan berhasil dikirim.
+      </p>
+
+      <p class="status-danger" role="alert" hidden>
+        ! Terjadi kesalahan. Silakan periksa kembali data yang diisi.
+      </p>
 
       <section aria-labelledby="preview-title">
         <h2 id="preview-title">Preview Data</h2>

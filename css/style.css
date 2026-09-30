@@ -1,19 +1,29 @@
 :root {
-  --color-primary: #6f3b1f;
-  --color-primary-strong: #4b2715;
-  --color-text: #2f2118;
-  --color-muted: #6b5b52;
-  --color-surface: #f6f0e8;
-  --color-surface-strong: #dccbbc;
-  --color-border: #dccbbc;
-  --color-focus: #2563eb;
+  --color-primary: #155e8a;
+  --color-primary-strong: #0f4668;
+  --color-primary-soft: #DCE6F2;
+
+  --color-text: #172b3a;
+  --color-muted: #526b7a;
+  --color-surface: #f4f8fa;
+  --color-surface-soft: #d9eaf2;
+  --color-border: #8fb5c9;
+  --color-focus: #f59e0b;
+
+  --color-success:#166534;
+  --color-danger:#b91c1c;
+
+
   --space-1: 0.5rem;
   --space-2: 0.75rem;
   --space-3: 1rem;
   --space-4: 1.5rem;
   --space-5: 2rem;
+
   --radius-sm: 0.5rem;
   --radius-md: 0.875rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2.5rem;
   --shadow-card: 0 0.5rem 1.5rem rgb(47 33 24 / 0.1);
 }
 *,
@@ -29,7 +39,7 @@ html {
 body {
   margin: 0;
   color: var(--color-text);
-  background: var(--color-surface-strong);
+  background: var(--color-surface-soft);
   font-family:
     system-ui,
     -apple-system,
@@ -68,7 +78,7 @@ li {
   text-transform: uppercase;
 }
 .hero .eyebrow {
-  color: #fef3c7;
+  color: var(--color-primary-soft);
 }
 .price {
   color: var(--color-primary-strong);
@@ -100,12 +110,12 @@ li {
   min-height: 160px;
   margin-right: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: var(--space-4);
   box-sizing: border-box;
-  border-radius: 15px;
-  background: white;
+  border-radius: var(--radius-lg);
+  background: var(--color-primary-soft);
   text-align: center;
-  box-shadow: 0 10px 30px rgb(47 33 24 / 10%);
+  box-shadow: var(--shadow-card);
 }
 
 .products li p {
@@ -116,10 +126,10 @@ li {
 
 section[aria-labelledby="info-title"] {
   margin-top: 30px;
-  padding: 24px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgb(47 33 24 / 10%);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
 }
 
 section[aria-labelledby="info-title"] h2 {
@@ -131,6 +141,14 @@ section[aria-labelledby="info-title"] p {
   line-height: 1.5;
 }
 
+section[aria-labelledby="info-title"],
+section#kontak {
+  margin-top: 30px;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
 .button,
 button {
   display: inline-block;
@@ -151,11 +169,11 @@ button:hover {
 }
 .hero button {
   color: var(--color-text);
-  background: #fef3c7;
+  background: var(--color-primary-soft);
 }
 .hero button:hover {
   color: var(--color-text);
-  background: #fde68a;
+  background: var(--color-border);
 }
 
 .skip-link {
@@ -194,7 +212,7 @@ button:hover {
 .brand {
   display: inline-block;
   margin-bottom: 8px;
-  color: #4b2715;
+  color: var(--color-primary-strong);
   font-weight: 800;
   text-decoration: none;
 }
@@ -213,14 +231,14 @@ button:hover {
   color: var(--color-primary-strong);
   font-weight: 800;
   text-decoration: none;
-  background: #fef3c7;
+  background: var(--color-primary-soft);
   border-radius: var(--radius-sm);
 }
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid #2563eb;
-  outline-offset: 3px;
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 .site-footer {
@@ -239,6 +257,7 @@ img {
 a {
   color: var(--color-primary);
 }
+
 a:hover {
   color: var(--color-primary-strong);
 }
@@ -252,7 +271,7 @@ figure {
 }
 figcaption {
   margin-top: 8px;
-  color: #6b5b52;
+  color:var(--color-muted);
 }
 table {
   width: 100%;
@@ -267,7 +286,7 @@ th,
 td {
   padding: 10px;
   text-align: left;
-  border: 1px solid #dccbbc;
+  border: 1px solid var(--color-border);
 }
 .field {
   margin-bottom: var(--space-3);
@@ -353,4 +372,24 @@ td {
 }
 th {
   background: var(--color-surface-soft);
+}
+
+.status-success {
+  margin-block: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-success);
+  font-weight: 700;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.status-danger {
+  margin-block: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-danger);
+  font-weight: 700;
+  background: var(--color-surface);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-sm);
 }

@@ -1,5 +1,6 @@
 const form = document.querySelector("#form-kontak");
 const preview = document.querySelector("#preview-form");
+const statusSuccess = document.querySelector(".status-success");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -14,4 +15,6 @@ form.addEventListener("submit", (event) => {
     `Topik: ${data.get("topik")}`,
     `Pesan: ${data.get("pesan")}`,
   ].join("\n");
+
+   statusSuccess.hidden = false;
 });
