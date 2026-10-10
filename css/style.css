@@ -1,7 +1,7 @@
 :root {
   --color-primary: #155e8a;
   --color-primary-strong: #0f4668;
-  --color-primary-soft: #DCE6F2;
+  --color-primary-soft: #dce6f2;
 
   --color-text: #172b3a;
   --color-muted: #526b7a;
@@ -10,9 +10,8 @@
   --color-border: #8fb5c9;
   --color-focus: #f59e0b;
 
-  --color-success:#166534;
-  --color-danger:#b91c1c;
-
+  --color-success: #166534;
+  --color-danger: #b91c1c;
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -53,11 +52,40 @@ body {
 }
 
 .hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-4);
+  align-items: center;
   padding: var(--space-5);
   color: var(--color-surface);
   background: var(--color-primary);
   border-radius: var(--radius-md);
 }
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.products-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 h1,
 h2,
 h3 {
@@ -200,6 +228,20 @@ button:hover {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
 }
+.nav {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: space-between;
+}
+/*header biar keliahatan di atas*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 
 .brand {
   display: inline-block;
   margin-bottom: var(--space-2);
@@ -208,22 +250,33 @@ button:hover {
   text-decoration: none;
   max-width: 920px;
   margin: 0 auto;
-}
+} */
+
 .brand {
   display: inline-block;
   margin-bottom: 8px;
   color: var(--color-primary-strong);
   font-weight: 800;
   text-decoration: none;
+  font-size: 1.25rem;
+  white-space: nowrap;
 }
+
+.brand {
+  margin-bottom: 0;
+}
+
 .nav ul {
-  padding: 0;
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
-  list-style: none;
+  padding: 1.2rem;
 }
+
 .nav li {
-  display: inline-block;
-  margin: 0 var(--space-2) var(--space-1) 0;
+  margin: 0;
 }
 
 .nav a[aria-current="page"] {
@@ -271,7 +324,7 @@ figure {
 }
 figcaption {
   margin-top: 8px;
-  color:var(--color-muted);
+  color: var(--color-muted);
 }
 table {
   width: 100%;
@@ -336,6 +389,28 @@ audio {
   line-height: 1.4;
 } */
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+.product-badge {
+  align-self: flex-start;
+  padding: 0.25rem var(--space-2);
+  color: var(--color-primary-strong);
+  font-size: 0.875rem;
+  font-weight: 800;
+  background: var(--color-primary-soft);
+  border-radius: 999px;
+}
+
+.card-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
 .product-card,
 .media-card,
 table,
@@ -392,4 +467,110 @@ th {
   background: var(--color-surface);
   border: 1px solid var(--color-danger);
   border-radius: var(--radius-sm);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.hero-content p,
+.hero-content h1 {
+  margin-block: 0;
+}
+
+#promoButton,
+#pesanButton {
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+#promoButton {
+  margin-top: var(--space-2);
+}
+
+#pesanButton {
+  margin-bottom: var(--space-5);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  align-items: stretch;
+}
+
+.info-grid section {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-4);
+}
+
+.info-grid #kontak {
+  margin: 0;
+}
+
+/*untuk form kontak*/
+#form-kontak {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  align-items: start;
+}
+
+/* Flexbox untuk label dan kontrol form */
+#form-kontak .field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+#form-kontak .field input,
+#form-kontak .field select,
+#form-kontak .field textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+#form-kontak fieldset {
+  min-width: 0;
+  margin: 0;
+}
+
+#form-kontak button[type="submit"] {
+  justify-self: start;
+}
+
+#form-kontak button[type="submit"] {
+  justify-self: start;
+  grid-column: 1 / -1;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-areas: "filter products";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.catalog-filter {
+  grid-area: filter;
+  min-width: 0;
+}
+
+.catalog-products {
+  grid-area: products;
+  min-width: 0;
 }

@@ -24,17 +24,19 @@
 
     <main id="konten" class="page">
       <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">Toko Pakaian Batang</p>
-        <h1 id="hero-title">Zeze Collection</h1>
-        <p>
-          Pakaian yang nyaman dan stylish untuk teman belajar, bekerja, dan
-          berdiskusi.
-        </p>
-        <button id="promoButton" type="button">
-          Lihat promo Zeze Collection hari ini
-        </button>
-
+        <div class="hero-content">
+          <p class="eyebrow">Toko Pakaian Batang</p>
+          <h1 id="hero-title">Zeze Collection</h1>
+          <p>
+            Pakaian yang nyaman dan stylish untuk teman belajar, bekerja, dan
+            berdiskusi.
+          </p>
+          <button id="promoButton" type="button">
+            Lihat promo Zeze Collection hari ini
+          </button>
+        </div>
         <img
+        class ="hero-image"
           src="assets/images/etalase-pakaian.jpg"
           alt="Etalase Zeze Collection berisi pakaian lokal"
         />
@@ -43,7 +45,7 @@
       <section aria-labelledby="produk-title">
         <h2 id="produk-title">Produk Unggulan</h2>
 
-        <div class="products- list">
+        <div class="products-grid">
           <article class="product-card">
             <h3>Kaos Polos</h3>
             <p>
@@ -52,9 +54,8 @@
             </p>
             <p class="price">Rp50.000</p>
           </article>
-        </div>
-
-        <div class="products- list">
+          
+        
           <article class="product-card">
             <h3>Kemeja Wanita</h3>
             <p>
@@ -62,9 +63,8 @@
             </p>
             <p class="price">Rp62.000</p>
           </article>
-        </div>
-
-        <div class="products- list">
+          
+        
           <article class="product-card">
             <h3>Kemeja Laki-laki</h3>
             <p>
@@ -72,20 +72,17 @@
             </p>
             <p class="price">Rp50.000</p>
           </article>
-        </div>
 
-
-         <div class="products- list">
+          
           <article class="product-card">
             <h3>Pakaian Wanita Lokal</h3>
             <p>
-              Pakaian wanita lokal berkualitas tinggi, nyaman dipakai sepanjang hari
+              Pakaian wanita lokal berkualitas tinggi, nyaman dipakai sepanjang
+              hari
             </p>
             <p class="price">Rp85.000</p>
           </article>
-        </div>
-
-        <div class="products- list">
+        
           <article class="product-card">
             <h3>Hoodie Lokal</h3>
             <p>
@@ -93,12 +90,15 @@
             </p>
             <p class="price">Rp85.000</p>
           </article>
+
         </div>
 
         <button id="pesanButton" type="button">Pesan Sekarang</button>
       </section>
 
+      <div class="info-grid">
       <section aria-labelledby="info-title">
+      
         <h2 id="info-title">Informasi Toko</h2>
         <p><strong>Jam Buka:</strong> Senin - Minggu, 08.00 - 20.00 WIB</p>
 
@@ -108,6 +108,7 @@
       </section>
 
       <section id="kontak" aria-labelledby="kontak-title">
+        
         <h2 id="kontak-title">Kontak Singkat</h2>
         <p><strong>Kota:</strong> Batang, Jawa Tengah</p>
         <p><strong>Jam Layanan:</strong> Senin - Minggu, 08.00 - 20.00 WIB</p>
@@ -118,6 +119,9 @@
           </a>
         </p>
       </section>
+      </div>
+
+      
     </main>
     <footer class="site-footer">
       <p>&copy; 2026 Zeze Collection. Data pada halaman ini bersifat dummy.</p>
